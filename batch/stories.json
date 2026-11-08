@@ -1,0 +1,402 @@
+[
+ {
+  "n": 1,
+  "key": "01_first_ice_cream",
+  "scene": "eating her first vanilla ice cream cone, cream on her nose",
+  "caption": "FIRST ICE CREAM",
+  "mom": "Okay baby, this is your very first ice cream!",
+  "baby": "It's so cold! I love it!"
+ },
+ {
+  "n": 2,
+  "key": "02_first_rain",
+  "scene": "standing at an open back door watching rain, tiny hand out catching raindrops",
+  "caption": "FIRST RAIN",
+  "mom": "Look sweetie, it's raining outside!",
+  "baby": "Water from the sky! Wow!"
+ },
+ {
+  "n": 3,
+  "key": "03_first_snow",
+  "scene": "sitting in fresh snow in a pink snowsuit, snowflakes on her cheeks",
+  "caption": "FIRST SNOW",
+  "mom": "Baby, this is snow! Touch it!",
+  "baby": "It's cold! Again! Again!"
+ },
+ {
+  "n": 4,
+  "key": "04_first_pickle",
+  "scene": "holding a green pickle spear in a high chair, surprised face",
+  "caption": "FIRST PICKLE",
+  "mom": "Here's a pickle. Try a little bite!",
+  "baby": "Crunchy! I want another one!"
+ },
+ {
+  "n": 5,
+  "key": "05_first_puppy",
+  "scene": "sitting on a living room rug as a golden retriever puppy licks her hand",
+  "caption": "MEET THE PUPPY",
+  "mom": "Baby, meet our new puppy, Max!",
+  "baby": "Puppy! He kissed me!"
+ },
+ {
+  "n": 6,
+  "key": "06_first_beach",
+  "scene": "sitting on sand at the beach, small waves behind her, bucket nearby",
+  "caption": "FIRST BEACH DAY",
+  "mom": "Here we are at the beach, baby!",
+  "baby": "Sand is in my toes!"
+ },
+ {
+  "n": 7,
+  "key": "07_first_birthday_cake",
+  "scene": "in front of a small smash cake with one candle, frosting on hands",
+  "caption": "1ST BIRTHDAY",
+  "mom": "Happy birthday, baby! Smash the cake!",
+  "baby": "Cake! Best day ever!"
+ },
+ {
+  "n": 8,
+  "key": "08_first_bubbles",
+  "scene": "reaching for soap bubbles in a sunny backyard",
+  "caption": "BUBBLES!!",
+  "mom": "Look, bubbles! Can you catch one?",
+  "baby": "Pop! I got one!"
+ },
+ {
+  "n": 9,
+  "key": "09_first_haircut",
+  "scene": "sitting in a kids salon chair with a cape, curls being trimmed",
+  "caption": "FIRST HAIRCUT",
+  "mom": "Sit still, it's your first haircut!",
+  "baby": "Do I look pretty?"
+ },
+ {
+  "n": 10,
+  "key": "10_first_swim",
+  "scene": "in a kiddie pool with arm floaties, splashing",
+  "caption": "FIRST SWIM",
+  "mom": "Kick your legs, baby! You're swimming!",
+  "baby": "Splash splash! I'm a fish!"
+ },
+ {
+  "n": 11,
+  "key": "11_first_broccoli",
+  "scene": "holding a broccoli floret in a high chair, suspicious face",
+  "caption": "BROCCOLI?!",
+  "mom": "Try the little tree, it's healthy!",
+  "baby": "Tiny tree? No thank you!"
+ },
+ {
+  "n": 12,
+  "key": "12_first_mirror",
+  "scene": "looking at herself in a big hallway mirror, touching the glass",
+  "caption": "WHO IS THAT?",
+  "mom": "Who's that baby in the mirror?",
+  "baby": "Hi baby! She copies me!"
+ },
+ {
+  "n": 13,
+  "key": "13_first_steps",
+  "scene": "standing up holding the edge of a couch, about to walk",
+  "caption": "FIRST STEPS",
+  "mom": "Come to mommy! You can do it!",
+  "baby": "I'm walking! Look at me!"
+ },
+ {
+  "n": 14,
+  "key": "14_first_pumpkin",
+  "scene": "sitting next to a big orange pumpkin in a pumpkin patch",
+  "caption": "PUMPKIN PATCH",
+  "mom": "Look at this giant pumpkin, baby!",
+  "baby": "It's bigger than me!"
+ },
+ {
+  "n": 15,
+  "key": "15_first_strawberry",
+  "scene": "holding a big red strawberry, juice on chin, high chair",
+  "caption": "FIRST STRAWBERRY",
+  "mom": "Here's a strawberry for you!",
+  "baby": "Sweet! More strawberry please!"
+ },
+ {
+  "n": 16,
+  "key": "16_first_lemonade",
+  "scene": "holding a sippy cup of lemonade at a backyard picnic table",
+  "caption": "LEMONADE TIME",
+  "mom": "Try some lemonade, sweetie!",
+  "baby": "Sour and sweet! Yummy!"
+ },
+ {
+  "n": 17,
+  "key": "17_first_grandma_video_call",
+  "scene": "in front of a tablet on a kitchen table, waving at the screen",
+  "caption": "CALLING GRANDMA",
+  "mom": "Say hi to Grandma, baby!",
+  "baby": "Hi Grandma! I love you!"
+ },
+ {
+  "n": 18,
+  "key": "18_first_christmas_tree",
+  "scene": "sitting under a lit Christmas tree touching an ornament",
+  "caption": "FIRST CHRISTMAS",
+  "mom": "Look at the Christmas lights!",
+  "baby": "Shiny! Is it for me?"
+ },
+ {
+  "n": 19,
+  "key": "19_first_halloween",
+  "scene": "wearing a tiny pumpkin costume holding a candy bucket on a porch",
+  "caption": "FIRST HALLOWEEN",
+  "mom": "Trick or treat, little pumpkin!",
+  "baby": "Candy! Trick or treat!"
+ },
+ {
+  "n": 20,
+  "key": "20_first_kitten",
+  "scene": "sitting on the floor as a fluffy white kitten sniffs her",
+  "caption": "MEET THE KITTEN",
+  "mom": "This is your kitty, Snowball!",
+  "baby": "Soft! Kitty is my friend!"
+ },
+ {
+  "n": 21,
+  "key": "21_first_spaghetti",
+  "scene": "with spaghetti and red sauce all over her face, high chair",
+  "caption": "SPAGHETTI MESS",
+  "mom": "Spaghetti night, baby! Slurp it!",
+  "baby": "Noodles are so long!"
+ },
+ {
+  "n": 22,
+  "key": "22_first_balloon",
+  "scene": "holding a string of a big red balloon in a living room",
+  "caption": "BIG BALLOON",
+  "mom": "Hold the balloon string tight!",
+  "baby": "It's flying! Don't go!"
+ },
+ {
+  "n": 23,
+  "key": "23_first_watermelon",
+  "scene": "holding a slice of watermelon on a summer porch",
+  "caption": "WATERMELON",
+  "mom": "Big slice of watermelon for you!",
+  "baby": "Juicy! It's dripping!"
+ },
+ {
+  "n": 24,
+  "key": "24_first_shoes",
+  "scene": "sitting on the floor wearing tiny new pink sneakers",
+  "caption": "NEW SHOES",
+  "mom": "Look at your brand new shoes!",
+  "baby": "Pretty shoes! Let's go!"
+ },
+ {
+  "n": 25,
+  "key": "25_first_library",
+  "scene": "sitting on a reading mat in a library holding a picture book",
+  "caption": "FIRST BOOK",
+  "mom": "Let's read your first book!",
+  "baby": "Again! Read it again!"
+ },
+ {
+  "n": 26,
+  "key": "26_first_carousel",
+  "scene": "riding a carousel horse with a parent's hand holding her",
+  "caption": "CAROUSEL RIDE",
+  "mom": "Hold on, the horsey is moving!",
+  "baby": "Faster horsey! Faster!"
+ },
+ {
+  "n": 27,
+  "key": "27_first_fireworks",
+  "scene": "in a parent's arms at night with fireworks in the sky",
+  "caption": "FIRST FIREWORKS",
+  "mom": "Look up, baby! Fireworks!",
+  "baby": "Boom! So pretty!"
+ },
+ {
+  "n": 28,
+  "key": "28_first_garden",
+  "scene": "in a garden holding a tiny watering can near flowers",
+  "caption": "LITTLE GARDENER",
+  "mom": "Let's water the flowers together!",
+  "baby": "Drink water, flowers!"
+ },
+ {
+  "n": 29,
+  "key": "29_first_pancakes",
+  "scene": "at the breakfast table with a small stack of pancakes and syrup",
+  "caption": "PANCAKE MORNING",
+  "mom": "Pancakes with syrup, your favorite!",
+  "baby": "Sticky! I love pancakes!"
+ },
+ {
+  "n": 30,
+  "key": "30_first_zoo",
+  "scene": "in a stroller in front of a giraffe at the zoo",
+  "caption": "FIRST ZOO TRIP",
+  "mom": "Look, a giraffe! So tall!",
+  "baby": "Giraffe has a long neck!"
+ },
+ {
+  "n": 31,
+  "key": "31_first_bath_duck",
+  "scene": "in a bubble bath holding a yellow rubber duck",
+  "caption": "BATH TIME",
+  "mom": "Here's your rubber ducky!",
+  "baby": "Quack quack! Duck is happy!"
+ },
+ {
+  "n": 32,
+  "key": "32_first_sprinkler",
+  "scene": "running through a lawn sprinkler in a swimsuit",
+  "caption": "SPRINKLER FUN",
+  "mom": "Run through the sprinkler, baby!",
+  "baby": "It tickles! Again!"
+ },
+ {
+  "n": 33,
+  "key": "33_first_leaf_pile",
+  "scene": "sitting in a pile of autumn leaves throwing them up",
+  "caption": "LEAF PILE",
+  "mom": "Jump in the leaves, baby!",
+  "baby": "Crunchy leaves! Wheee!"
+ },
+ {
+  "n": 34,
+  "key": "34_first_cookie",
+  "scene": "holding a chocolate chip cookie, crumbs everywhere",
+  "caption": "FIRST COOKIE",
+  "mom": "Just one cookie, okay?",
+  "baby": "Two cookies please!"
+ },
+ {
+  "n": 35,
+  "key": "35_first_drum",
+  "scene": "sitting with a toy drum and drumsticks in a playroom",
+  "caption": "LITTLE DRUMMER",
+  "mom": "Can you play the drum?",
+  "baby": "Boom boom! I'm loud!"
+ },
+ {
+  "n": 36,
+  "key": "36_first_sunglasses",
+  "scene": "wearing tiny heart sunglasses on a sunny porch",
+  "caption": "COOL BABY",
+  "mom": "Wow, look at those sunglasses!",
+  "baby": "I'm so cool!"
+ },
+ {
+  "n": 37,
+  "key": "37_first_ducks_pond",
+  "scene": "at a pond edge throwing seeds to ducks",
+  "caption": "FEEDING DUCKS",
+  "mom": "Throw the seeds to the ducks!",
+  "baby": "Ducks! Come eat!"
+ },
+ {
+  "n": 38,
+  "key": "38_first_corn",
+  "scene": "holding a buttery corn on the cob at a backyard BBQ",
+  "caption": "CORN ON THE COB",
+  "mom": "Try the corn, it's sweet!",
+  "baby": "Corn is crunchy!"
+ },
+ {
+  "n": 39,
+  "key": "39_first_hat_dad",
+  "scene": "wearing dad's huge baseball cap falling over her eyes",
+  "caption": "DADDY'S HAT",
+  "mom": "Is that daddy's hat?",
+  "baby": "Where did everybody go?"
+ },
+ {
+  "n": 40,
+  "key": "40_first_school_bus",
+  "scene": "on a sidewalk pointing at a yellow school bus",
+  "caption": "YELLOW BUS",
+  "mom": "Look, a big yellow bus!",
+  "baby": "I want to ride the bus!"
+ },
+ {
+  "n": 41,
+  "key": "41_first_avocado",
+  "scene": "holding green avocado slice, confused face, high chair",
+  "caption": "AVOCADO?",
+  "mom": "This is avocado. Try it!",
+  "baby": "It's squishy! Hmm, okay!"
+ },
+ {
+  "n": 42,
+  "key": "42_first_painting",
+  "scene": "finger painting on paper, colorful paint on hands",
+  "caption": "LITTLE ARTIST",
+  "mom": "Let's paint a picture together!",
+  "baby": "I made a rainbow!"
+ },
+ {
+  "n": 43,
+  "key": "43_first_cereal",
+  "scene": "in a high chair picking up cereal O's one by one",
+  "caption": "CEREAL TIME",
+  "mom": "Pick up the little O's!",
+  "baby": "One, two, all mine!"
+ },
+ {
+  "n": 44,
+  "key": "44_first_wind",
+  "scene": "in a park with wind blowing her curls wildly",
+  "caption": "WINDY DAY",
+  "mom": "Whoa, it's so windy today!",
+  "baby": "My hair is flying!"
+ },
+ {
+  "n": 45,
+  "key": "45_first_popcorn",
+  "scene": "holding a bowl of popcorn on a couch at movie night",
+  "caption": "MOVIE NIGHT",
+  "mom": "Popcorn and a movie, baby!",
+  "baby": "Popcorn goes pop!"
+ },
+ {
+  "n": 46,
+  "key": "46_first_tooth",
+  "scene": "smiling wide showing one tiny tooth in a bathroom",
+  "caption": "FIRST TOOTH",
+  "mom": "Let me see your new tooth!",
+  "baby": "Look! I have a tooth!"
+ },
+ {
+  "n": 47,
+  "key": "47_first_banana",
+  "scene": "holding a peeled banana, big grin, high chair",
+  "caption": "BANANA TIME",
+  "mom": "Here's a banana for you!",
+  "baby": "Banana! My favorite!"
+ },
+ {
+  "n": 48,
+  "key": "48_first_slide",
+  "scene": "at the top of a small playground slide",
+  "caption": "FIRST SLIDE",
+  "mom": "Ready? Slide down to me!",
+  "baby": "Wheee! Again, again!"
+ },
+ {
+  "n": 49,
+  "key": "49_first_hot_sauce_smell",
+  "scene": "sniffing a tiny bottle of hot sauce, scrunched face",
+  "caption": "HOT SAUCE?!",
+  "mom": "Don't eat it, just smell!",
+  "baby": "Ew! Spicy nose!"
+ },
+ {
+  "n": 50,
+  "key": "50_first_goodnight",
+  "scene": "in pajamas in a crib holding a teddy bear, night light",
+  "caption": "GOODNIGHT BABY",
+  "mom": "Time to sleep, my sweet baby.",
+  "baby": "Goodnight Mommy! Love you!"
+ }
+]

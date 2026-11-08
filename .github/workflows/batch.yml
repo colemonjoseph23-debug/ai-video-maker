@@ -1,0 +1,85 @@
+name: Batch Shorts
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "comma-separated keys (blank = all)"
+        required: false
+        default: ""
+permissions:
+  contents: write
+  actions: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      keys: ${{ steps.k.outputs.keys }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: k
+        run: |
+          if [ -n "${{ inputs.only }}" ]; then K=$(echo "${{ inputs.only }}" | jq -R -c 'split(",")'); else K=$(jq -c '[.[].key]' batch/stories.json); fi
+          echo "keys=$K" >> $GITHUB_OUTPUT
+  render:
+    needs: plan
+    runs-on: ubuntu-22.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        key: ${{ fromJSON(needs.plan.outputs.keys) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"
+      - uses: actions/cache@v4
+        with:
+          path: |
+            SadTalker/checkpoints
+            SadTalker/gfpgan
+          key: sadtalker-models-v2
+      - name: Install
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+          git clone --depth 1 https://github.com/OpenTalker/SadTalker.git SadTalker_src && cp -rn SadTalker_src/. SadTalker/ 2>/dev/null || mv SadTalker_src SadTalker
+          cd SadTalker
+          pip install torch==1.12.1+cpu torchvision==0.13.1+cpu torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+          mkdir -p checkpoints gfpgan/weights
+          find checkpoints gfpgan -size 0 -delete
+          B=https://huggingface.co/camenduru/SadTalker/resolve/main/new
+          for f in checkpoints/SadTalker_V0.0.2_256.safetensors checkpoints/mapping_00109-model.pth.tar checkpoints/mapping_00229-model.pth.tar gfpgan/weights/alignment_WFLW_4HG.pth gfpgan/weights/detection_Resnet50_Final.pth gfpgan/weights/parsing_parsenet.pth gfpgan/weights/GFPGANv1.4.pth; do
+            [ -s "$f" ] || wget -q --tries=5 -O "$f" "$B/$f"
+          done
+      - name: Talk
+        run: |
+          K=${{ matrix.key }}
+          cd SadTalker
+          python inference.py --driven_audio ../batch/aud/${K}_baby.wav --source_image ../batch/img/${K}.png --result_dir ../talk --still --preprocess full --cpu --size 256
+      - name: Assemble
+        run: |
+          K=${{ matrix.key }}
+          T=$(ls talk/*.mp4 | head -1)
+          mkdir -p final && python3 tools/assemble.py $K "$T" batch/img/$K.png batch/aud/${K}_mom.mp3 final/$K.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: short-${{ matrix.key }}
+          path: final/*.mp4
+  collect:
+    needs: render
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: short-*
+          merge-multiple: true
+          path: shorts
+      - run: |
+          ls -la shorts || exit 0
+          git config user.name bot && git config user.email bot@users.noreply.github.com
+          git pull --rebase
+          git add shorts && git commit -m "add shorts" && git push || echo nothing
