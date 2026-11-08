@@ -17,14 +17,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.8'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            SadTalker/checkpoints
+            SadTalker/gfpgan
+          key: sadtalker-models-v1
       - name: Install
         run: |
           sudo apt-get update && sudo apt-get install -y ffmpeg
-          git clone --depth 1 https://github.com/OpenTalker/SadTalker.git
+          git clone --depth 1 https://github.com/OpenTalker/SadTalker.git SadTalker_src && cp -rn SadTalker_src/. SadTalker/ 2>/dev/null || mv SadTalker_src SadTalker
           cd SadTalker
           pip install torch==1.12.1+cpu torchvision==0.13.1+cpu torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cpu
           pip install -r requirements.txt
-          bash scripts/download_models.sh
+          sed -i 's/^wget -nc/wget -nc --tries=5 --timeout=60/' scripts/download_models.sh
+          bash scripts/download_models.sh || true
+          ls -la checkpoints gfpgan/weights
       - name: Run
         run: |
           cd SadTalker
