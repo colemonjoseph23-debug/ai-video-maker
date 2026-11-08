@@ -42,10 +42,15 @@ jobs:
           key: sadtalker-models-v2
       - name: Install
         run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+          df -h /
           sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
           git clone --depth 1 https://github.com/OpenTalker/SadTalker.git SadTalker_src && cp -rn SadTalker_src/. SadTalker/ 2>/dev/null || mv SadTalker_src SadTalker
           cd SadTalker
           pip install torch==1.12.1+cpu torchvision==0.13.1+cpu torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          export PIP_NO_CACHE_DIR=1
+          pip install wheel cython
+          pip install basicsr==1.4.2 --no-build-isolation
           pip install -r requirements.txt
           mkdir -p checkpoints gfpgan/weights
           find checkpoints gfpgan -size 0 -delete
