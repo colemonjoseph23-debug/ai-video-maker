@@ -22,7 +22,7 @@ jobs:
           path: |
             SadTalker/checkpoints
             SadTalker/gfpgan
-          key: sadtalker-models-v1
+          key: sadtalker-models-v2
       - name: Install
         run: |
           sudo apt-get update && sudo apt-get install -y ffmpeg
@@ -30,8 +30,12 @@ jobs:
           cd SadTalker
           pip install torch==1.12.1+cpu torchvision==0.13.1+cpu torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cpu
           pip install -r requirements.txt
-          sed -i 's/^wget -nc/wget -nc --tries=5 --timeout=60/' scripts/download_models.sh
-          bash scripts/download_models.sh || true
+          mkdir -p checkpoints gfpgan/weights
+          find checkpoints gfpgan -size 0 -delete
+          B=https://huggingface.co/camenduru/SadTalker/resolve/main/new
+          for f in checkpoints/SadTalker_V0.0.2_256.safetensors checkpoints/mapping_00109-model.pth.tar checkpoints/mapping_00229-model.pth.tar gfpgan/weights/alignment_WFLW_4HG.pth gfpgan/weights/detection_Resnet50_Final.pth gfpgan/weights/parsing_parsenet.pth gfpgan/weights/GFPGANv1.4.pth; do
+            [ -s "$f" ] || wget -q --tries=5 -O "$f" "$B/$f"
+          done
           ls -la checkpoints gfpgan/weights
       - name: Run
         run: |
