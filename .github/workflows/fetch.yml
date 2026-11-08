@@ -1,0 +1,24 @@
+name: Save artifact to repo
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: run id
+        required: true
+permissions:
+  contents: write
+  actions: read
+jobs:
+  save:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: result
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ github.token }}
+          path: output/${{ inputs.run_id }}
+      - run: |
+          git config user.name bot && git config user.email bot@users.noreply.github.com
+          git add output && git commit -m "save output ${{ inputs.run_id }}" && git push
