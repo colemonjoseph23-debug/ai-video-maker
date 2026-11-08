@@ -1,0 +1,36 @@
+name: SadTalker animate
+on:
+  workflow_dispatch:
+    inputs:
+      image:
+        description: image in input/
+        default: baby3.png
+      audio:
+        description: wav in input/
+        default: a3.wav
+jobs:
+  animate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+      - name: Install
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          git clone --depth 1 https://github.com/OpenTalker/SadTalker.git
+          cd SadTalker
+          pip install torch==1.12.1+cpu torchvision==0.13.1+cpu torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+          bash scripts/download_models.sh
+      - name: Run
+        run: |
+          cd SadTalker
+          python inference.py --driven_audio ../input/${{ inputs.audio }} --source_image ../input/${{ inputs.image }} --result_dir ../out --still --preprocess full --cpu --size 256 --enhancer none || python inference.py --driven_audio ../input/${{ inputs.audio }} --source_image ../input/${{ inputs.image }} --result_dir ../out --still --preprocess full --cpu
+          find ../out -name "*.mp4"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: result
+          path: out/**/*.mp4
